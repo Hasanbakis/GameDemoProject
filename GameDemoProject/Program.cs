@@ -15,7 +15,7 @@ namespace GameDemoProject
 
             person1.Id = 1;
             person1.FirstName = "HASAN";
-            person1.LastName = "BAKIŞ";
+            person1.LastName = "TOPRAK";
             person1.DateOfBirthYear = 1998;
             person1.NationalIdentity = 3057696;
             personManager.Condition(person1);
@@ -34,8 +34,7 @@ namespace GameDemoProject
             game.Price = 150;
             
 
-           GameSaleManager gameSaleManager = new GameSaleManager(game,campaign,new UserValidationManager());
-
+           GameSaleManager gameSaleManager = new GameSaleManager(game,campaign);
            gameSaleManager.Sale(person1, game, campaign);
 
 

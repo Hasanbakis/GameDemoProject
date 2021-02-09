@@ -6,7 +6,7 @@ using System.Text;
 
 namespace GameDemoProject.Entities
 {
-     class PersonManager : IPersonService
+     public class PersonManager : IPersonService
     {
         UserValidationManager _userValidationManager;
         public PersonManager(UserValidationManager userValidationManager)//Constructor

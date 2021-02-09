@@ -7,26 +7,19 @@ using System.Text;
 namespace GameDemoProject.Concrete
 {
     class GameSaleManager : ISaleService
-    {
-
-        UserValidationManager _userValidationManager;
-        public GameSaleManager(UserValidationManager userValidationManager)//Constructor
-        {
-            _userValidationManager = userValidationManager;
-
-        }
+    { 
         public double _campaignPrice;
-        public GameSaleManager(Game game,Campaign campign, UserValidationManager userValidationManager)//constructor
+        public GameSaleManager(Game game,Campaign campaign)//constructor
         {
-            _campaignPrice = (game.Price * campign.DiscountRate) / 100;
+            _campaignPrice = (game.Price * campaign.DiscountRate) / 100;
         }
 
-        public void Sale(Person person, Game game, Campaign campign)
+        public void Sale(Person person, Game game, Campaign campaign)
         {
             
-            if (campign !=null)
+            if (campaign !=null)
             {
-                Console.WriteLine(person.FirstName +" "+game.Name+" adlı oyunu "+campign.CampaignName+ " kampanyasıyla " +_campaignPrice+ " TL indirimle satın aldı");
+                Console.WriteLine(person.FirstName +" "+game.Name+" adlı oyunu "+campaign.CampaignName+ " kampanyasıyla " +_campaignPrice+ " TL indirimle satın aldı");
             }
             else
             {
